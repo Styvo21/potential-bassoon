@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>USDT Deposit Portal</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">CRYPTO<span>PORTAL</span></div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#deposit">Deposit</a>
+      <a href="#history">History</a>
+    </nav>
+  </header>
+
+
+  <main id="home">
+
+    <section class="hero">
+
+      <div class="hero-text">
+
+        <p class="tag">SECURE CRYPTO DEPOSIT</p>
+
+        <h1>Deposit USDT Easily</h1>
+
+        <p>
+          Send USDT using the TRON TRC20 network and submit your
+          transaction ID for verification.
+        </p>
+
+        <a href="#deposit" class="button">
+          Make a Deposit
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <section id="deposit" class="deposit-section">
+
+      <div class="deposit-card">
+
+        <h2>Deposit USDT</h2>
+
+        <div class="info-box">
+
+          <span>Network</span>
+
+          <strong>TRON (TRC20)</strong>
+
+        </div>
+
+
+        <div class="info-box">
+
+          <span>Minimum Deposit</span>
+
+          <strong>20 USDT</strong>
+
+        </div>
+
+
+        <div class="wallet-box">
+
+          <p>USDT TRC20 Wallet Address</p>
+
+          <div class="wallet-address">
+
+            <input
+              type="text"
+              id="walletAddress"
+              value="TKa12gyMm7jHANhLXCosgwG56fQw9NPJt3"
+              readonly
+            />
+
+            <button onclick="copyWallet()">
+              Copy
+            </button>
+
+          </div>
+
+        </div>
+
+
+        <div class="warning">
+
+          ⚠ Important: Only send USDT using the TRC20 network.
+          Sending cryptocurrency through another network may result
+          in permanent loss of funds.
+
+        </div>
+
+
+        <form id="depositForm">
+
+          <label for="amount">
+            Amount Sent (USDT)
+          </label>
+
+          <input
+            type="number"
+            id="amount"
+            placeholder="Minimum 20 USDT"
+            min="20"
+            required
+          />
+
+
+          <label for="txid">
+            Transaction Hash (TXID)
+          </label>
+
+          <input
+            type="text"
+            id="txid"
+            placeholder="Paste your TRC20 transaction hash"
+            required
+          />
+
+
+          <button type="submit" class="deposit-button">
+            Submit Deposit for Verification
+          </button>
+
+        </form>
+
+        <p id="message"></p>
+
+      </div>
+
+    </section>
+
+
+    <section id="history" class="history-section">
+
+      <h2>Transaction Information</h2>
+
+      <p>
+        Deposits submitted through this website remain pending until
+        independently verified.
+      </p>
+
+      <div id="transactionList">
+
+        <p class="empty">
+          No transactions submitted yet.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+
+    <p>
+      © 2026 Crypto Portal. Cryptocurrency transactions involve risk.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
